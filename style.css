@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+/*Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: idroid;
+    src: url("fontes/idroid.otf");
+}
+
+/*
+Paleta de cores: 
+#FF7066
+#D93F3F
+#f5d7c5
+*/
+
+
+/*ESTILIZAÇÃO*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f5d7c5;
+}
+
+/*CABEÇALHO*/
+header{
+    text-align: center;
+    color: white;
+    padding: 25px 5px 10px 5px;
+    font-size: 19px;
+    background-image: linear-gradient(to top, #DB310B, #D93F3F );
+    box-shadow: 1px 2px 2px #861d06;
+}
+header > h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px;
+    font-weight: 500;
+    text-shadow: 1px 2px 2px #861d06;
+}
+header > p{
+    text-shadow: 1px 2px 2px #861d06;
+}
+nav{
+    margin-top: 80px;
+    padding-left: 4px;
+}
+#menu{
+    text-align: left;
+}
+nav > a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #f5d7c5;
+    padding: 8px;
+    font-size: 0.9em;
+}
+nav > a:hover{
+    background-color:  #f5d7c5;
+    color: #DB310B;
+    border-radius: 5px;
+}
+
+a{
+    color: #DB310B;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*CORPO*/
+main{
+    background-color: white;
+    min-width: 400px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: 2px;
+    box-shadow: 0px 3px 8px -1px #0000002f;
+    border-radius: 0px 0px 10px 10px;
+}
+article > p, main > p{
+    text-indent: 1.5em;
+    line-height: 2;
+}
+article > h2, h1{
+    font-family: idroid;
+    font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+article > h1{
+    font-size: 28px;
+    color: #861d06;
+}
+article > h2 {
+    color: #DB310B;
+    font-size: 20px;
+    background-image: linear-gradient(to left, white, #f5d7c5 );
+    padding: 2px;
+    padding-left: 10px;
+}
+
+article > p > a:hover, section > p > a:hover{
+    text-decoration: underline;
+}
+mark:hover, section > p > a:hover{
+    color: #dd5b3e;
+}
+mark{
+    color: #DB310B;
+    background-color:  #f5d7c5;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+strong{
+    color: #DB310B;
+}
+
+main{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+mark::after{
+    content: ' 🔗';
+}
+#video{
+    background-color: #861d06;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 15px;
+}
+.responsividadediv{
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+.responsividadeiframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+picture > img, picture > source{
+   width: 100%;
+   margin: auto; 
+   display: block;
+}
+img{
+    margin: auto; 
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/*EXTRA*/
+#extra{
+    background-color: #f5d7c5;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    box-shadow: 4px 5px 7px 0px #0000002f;
+}
+#extra > div > h2 {
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+#extra > div{
+    background-color: #D93F3F;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+main > section > p{
+    text-indent: 1.5em;
+    line-height: 2;
+    padding: 10px;
+}
+
+ul{
+    padding-left: 30px;
+    columns: 2;
+    list-style: none;
+    padding-bottom: 10px;
+}
+li{
+    list-style: " ✔ ";
+}
+
+
+/*RODAPÉ*/
+
+footer{
+    margin-top: 35px;
+    background-color: #861d06;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+footer > p > a{
+    color: white;
+}
+
+footer > p > a:hover{
+    color: #f5d7c5;
+    border-radius: 5px;
+    text-decoration: underline;
+}
