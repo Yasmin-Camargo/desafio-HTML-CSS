@@ -1,19 +1,27 @@
 @charset "UTF-8";
 
-/*Fontes*/
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @font-face {
-    font-family: idroid;
-    src: url("fontes/idroid.otf");
+    font-family: 'idroid';
+    src: url("../fontes/idroid.otf") format('opentype');
+    font-weight: normal;
 }
 
-/*
-Paleta de cores: 
-#FF7066
-#D93F3F
-#f5d7c5
-*/
 
+:root{
+    /*Paleta de cores: */
+    --cor00: #861d06;
+    --cor01: #DB310B;
+    --cor02: #D93F3F;
+    --cor03: #FF7066;
+    --cor04: #f5d7c5;
+
+    /*Fontes*/
+    --fonte-padrao: arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque:'Bebas Neue', cursive;
+    --fonte-android: idroid, cursive
+}
 
 /*ESTILIZAÇÃO*/
 * {
@@ -21,33 +29,35 @@ Paleta de cores:
     padding: 0px;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-padrao);
     text-align: justify;
     margin: 0px;
     padding: 0px;
-    background-color: #f5d7c5;
+    background-color: var(--cor04);
 }
 
 /*CABEÇALHO*/
 header{
     text-align: center;
     color: white;
-    padding: 25px 5px 10px 5px;
+    padding: 25px 5px 6px 5px;
     font-size: 19px;
-    background-image: linear-gradient(to top, #DB310B, #D93F3F );
-    box-shadow: 1px 2px 2px #861d06;
+    background-image: linear-gradient(to top, var(--cor01), var(--cor02) );
+    box-shadow: 1px 2px 2px var(--cor00);
 }
 header > h1 {
-    font-family: 'Bebas Neue', cursive;
+    font-family: var(--fonte-destaque), cursive;
     font-size: 48px;
     font-weight: 500;
-    text-shadow: 1px 2px 2px #861d06;
+    text-shadow: 1px 2px 2px var(--cor00);
 }
 header > p{
-    text-shadow: 1px 2px 2px #861d06;
+    text-shadow: 1px 2px 2px var(--cor00);
+    max-width: 600px;
+    margin: auto;
 }
 nav{
-    margin-top: 80px;
+    margin-top: 60px;
     padding-left: 4px;
 }
 #menu{
@@ -56,18 +66,19 @@ nav{
 nav > a{
     font-weight: bold;
     text-decoration: none;
-    color: #f5d7c5;
+    color: var(--cor04);
     padding: 8px;
     font-size: 0.9em;
+    transition-duration: 1s;
 }
 nav > a:hover{
-    background-color:  #f5d7c5;
-    color: #DB310B;
-    border-radius: 5px;
+    background-color:  var(--cor04);
+    color: var(--cor01);
+    border-radius: 6px;
 }
 
 a{
-    color: #DB310B;
+    color: var(--cor01);
     font-weight: bold;
     text-decoration: none;
 }
@@ -89,39 +100,39 @@ article > p, main > p{
     line-height: 2;
 }
 article > h2, h1{
-    font-family: idroid;
+    font-family: var(--fonte-android);
     font-weight: normal;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 article > h1{
     font-size: 28px;
-    color: #861d06;
+    color: var(--cor00);
 }
 article > h2 {
-    color: #DB310B;
+    color: var(--cor02);
     font-size: 20px;
-    background-image: linear-gradient(to left, white, #f5d7c5 );
+    background-image: linear-gradient(to right,  var(--cor04) , transparent);
     padding: 2px;
     padding-left: 10px;
 }
 
-article > p > a:hover, section > p > a:hover{
+article a:hover{
     text-decoration: underline;
 }
 mark:hover, section > p > a:hover{
     color: #dd5b3e;
 }
 mark{
-    color: #DB310B;
-    background-color:  #f5d7c5;
+    color: var(--cor01);
+    background-color:  var(--cor04);
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
 }
 strong{
-    color: #DB310B;
+    color: var(--cor01);
 }
 
 main{
@@ -132,8 +143,24 @@ main{
 mark::after{
     content: ' 🔗';
 }
+picture > img, picture > source{
+   width: 100%;
+   margin: auto; 
+   display: block;
+}
+img{
+    margin: auto; 
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#imgbugdoid{
+    max-width: 350px;
+}
+
+/*Video*/
 #video{
-    background-color: #861d06;
+    background-color: var(--cor00);
     margin-left: -20px;
     margin-right: -20px;
     margin-top: 15px;
@@ -150,21 +177,10 @@ mark::after{
     width: 90%;
     height: 90%;
 }
-picture > img, picture > source{
-   width: 100%;
-   margin: auto; 
-   display: block;
-}
-img{
-    margin: auto; 
-    display: block;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
 
-/*EXTRA*/
+/*Extra*/
 #extra{
-    background-color: #f5d7c5;
+    background-color: var(--cor04);
     border-radius: 15px;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -179,14 +195,17 @@ img{
     font-size: 1.2em;
 }
 #extra > div{
-    background-color: #D93F3F;
+    background-color: var(--cor02);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-main > section > p{
+main > aside > p{
     text-indent: 1.5em;
     line-height: 2;
     padding: 10px;
+}
+aside a:hover{
+    text-decoration: underline;
 }
 
 ul{
@@ -204,7 +223,7 @@ li{
 
 footer{
     margin-top: 35px;
-    background-color: #861d06;
+    background-color: var(--cor00);
     color: white;
     text-align: center;
     font-size: 0.8em;
@@ -216,7 +235,7 @@ footer > p > a{
 }
 
 footer > p > a:hover{
-    color: #f5d7c5;
+    color: var(--cor04);
     border-radius: 5px;
     text-decoration: underline;
 }
